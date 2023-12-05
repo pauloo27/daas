@@ -14,7 +14,6 @@ RUN CGO_ENABLED=0 go build -o daas
 # STAGE: TARGET
 
 FROM alpine:latest
-RUN apk add ffmpeg
 
 RUN addgroup -S user && adduser -S user -G user
 
