@@ -12,6 +12,10 @@ func main() {
 	r := chi.NewRouter()
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello world!\n"))
+	})
+
+	r.Get("/daas", func(w http.ResponseWriter, r *http.Request) {
 		text := r.URL.Query().Get("text")
 		rawMaxSize := r.URL.Query().Get("maxSize")
 
